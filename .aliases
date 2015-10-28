@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+# https://twitter.com/rwjblue/status/536637409547808768
+# When running into issues with npm/bower it's a good idea to clear out
+# the cache. This is because pulled packages are still cached on the local
+# system but don't exist upstream.
+alias nombom='npm cache clear && bower cache clean && rm -rf node_modules bower_components && npm
+install && bower install'
+# https://github.com/BlakeWilliams/dotfiles/blob/668acd6e8ebbd8844422ffbd63b6ad823330a27a/.zsh/aliases.zsh#L10-L13
+alias killphantom="pkill -9 -f phantomjs"
