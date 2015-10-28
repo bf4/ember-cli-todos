@@ -1,0 +1,9 @@
+<ul class="nav nav-tabs">
+  {{#each tabs as |tab|}}
+    {{#with (array-join routePrefix '.' tab) as |routeName|}}
+      {{#nav-tab routeName=routeName is-active=(eq currentRouteName routeName)}}
+        {{capitalize-string tab}}
+      {{/nav-tab}}
+    {{/with}}
+  {{/each}}
+</ul>

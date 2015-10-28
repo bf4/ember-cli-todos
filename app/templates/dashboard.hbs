@@ -1,13 +1,6 @@
 <h2>The Dashboard</h2>
 <!-- Nav tabs -->
-<ul class="nav nav-tabs">
-  {{nav-tab name="Facilities" routePrefix="dashboard" route="facilities" is-active=(eq application.currentRouteName (array-join 'dashboard.' 'facilities'))}}
-  {{nav-tab name="Departments" routePrefix="dashboard" route="departments"}}
-  {{nav-tab name="Units" routePrefix="dashboard" route="units"}}
-  {{nav-tab name="Users" routePrefix="dashboard" route="users"}}
-  {{nav-tab name="Roles" routePrefix="dashboard" route="roles"}}
-  {{nav-tab name="Events" routePrefix="dashboard" route="events"}}
-</ul>
+{{top-nav routePrefix="dashboard" currentRouteName=application.currentRouteName}}
 
 <!-- Tab panes -->
 <div class="tab-content">
