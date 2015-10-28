@@ -1,5 +1,12 @@
 import Ember from 'ember';
-import Tab from 'frontend/models/tab';
+import { CanMixin } from 'ember-can';
 
-export default Ember.Route.extend({
+export default Ember.Route.extend(CanMixin, {
+  beforeModel(transition) {
+    const routeName = transition.targetName;
+    const canAccess = this.can('access route', {routeName});
+    if (!canAccess) {
+      this.transitionTo('not-found');
+    }
+  }
 });

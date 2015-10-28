@@ -14,6 +14,7 @@ Router.map(function() {
     this.route('roles');
     this.route('events');
   });
+  this.route('not-found');
 });
 
 export default Router;
