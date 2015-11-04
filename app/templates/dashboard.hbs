@@ -1,4 +1,10 @@
 <h2>The Dashboard</h2>
-<div>
-  {{partial 'dashboard/tabs'}}
+<!-- Nav tabs -->
+{{top-nav routePrefix="dashboard" currentRouteName=application.currentRouteName}}
+
+<!-- Tab panes -->
+<div class="tab-content">
+  <div class="tab-pane active">
+    {{outlet}}
+  </div>
 </div>

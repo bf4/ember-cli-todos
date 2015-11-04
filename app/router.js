@@ -6,9 +6,15 @@ var Router = Ember.Router.extend({
 });
 
 Router.map(function() {
-  this.route('dashboard', function() {
-    this.route('show', {path: '/:tab_name' });
+  this.route('dashboard', {path: '/'}, function() {
+    this.route('facilities');
+    this.route('departments');
+    this.route('units');
+    this.route('users');
+    this.route('roles');
+    this.route('events');
   });
+  this.route('not-found');
 });
 
 export default Router;
