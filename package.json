@@ -12,7 +12,7 @@
     "start": "ember server",
     "test": "ember test"
   },
-  "repository": "https://github.com/bf4/ember-cli-todos.git",
+  "repository": "https://github.com/bf4/frontend.git",
   "engines": {
     "node": ">= 0.10.0"
   },
