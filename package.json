@@ -43,7 +43,8 @@
   },
   "ember-addon": {
     "paths": [
-      "lib/bootstrap-sass"
+      "lib/bootstrap-sass",
+      "lib/highcharts"
     ]
   }
 }

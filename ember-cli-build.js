@@ -7,7 +7,8 @@ module.exports = function(defaults) {
       includePaths: [
         'bower_components/bootstrap-sass/assets/stylesheets'
       ]
-    }
+    },
+    includeHighCharts: true,
   };
   var app = new EmberApp(defaults, options);
 
