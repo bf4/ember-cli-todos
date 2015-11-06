@@ -27,11 +27,13 @@ module.exports = function(environment) {
     // ENV.APP.LOG_VIEW_LOOKUPS = true;
 
     // alter the content security policy for dev
+    // http://waltermcginnis.com/en/site/topics/show/96-using-pow-with-ember-cli-and-content-security-policy
+    // 20559
     ENV.contentSecurityPolicy = {
       'default-src': "'none'",
-      'script-src': "'self' 'unsafe-inline'",
-      'font-src': "'self'",
-      'connect-src': "'self'",
+      'script-src': "'self' *.dev:35730 *.dev:49152 *.xip.io:49152 'unsafe-inline'",
+      'font-src': "'self' http://*.dev/",
+      'connect-src': "'self' ws://*.dev:35730/ ws://*.dev:49152/ ws://*.xip.io:49152/",
       'img-src': "'self' data:",
       'style-src': "'self' 'unsafe-inline'",
       'media-src': "'self'"
