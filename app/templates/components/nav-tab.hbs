@@ -3,3 +3,9 @@
     {{yield}}
   {{/link-to}}
 </li>
+  {{#if is-active}}
+    <div id="chart-container" style="min-width: 310px; height: 400px; margin: 0 auto"></div>
+    hoo
+    {{high-charts containerId='chart-container'}}
+  {{/if}}
+  hoo
