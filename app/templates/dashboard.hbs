@@ -1,4 +1,11 @@
 <h2>The Dashboard</h2>
+<div style="text-align: center;" {{action 'toggleUserRole'}}>
+  {{# if isAdmin}}
+    {{md-btn text='Admin' class='indigo darken-2'}}
+  {{else}}
+    {{md-btn text='Customer' class='deep-purple darken-2'}}
+  {{/if}}
+</div>
 {{top-nav routePrefix="dashboard" currentRouteName=application.currentRouteName}}
 {{tab-content content=tableContent columnHeaders=tableColumnHeaders sortBy=sortBy sortAscending=sortAscending}}
 {{outlet}}
