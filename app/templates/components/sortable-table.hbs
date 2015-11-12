@@ -1,0 +1,24 @@
+<thead>
+  <tr>
+    <th data-field="startDate">
+      <span {{action "setSortBy" "startDate"}}>
+        <i class="mdi-content-sort"></i>
+        Start Date
+      </span>
+    </th>
+    <th data-field="endDate">
+      <span {{action "setSortBy" "endDate"}}>
+        <i class="mdi-content-sort"></i>
+        End Date
+      </span>
+    </th>
+  </tr>
+</thead>
+<tbody>
+  {{#each content as |row|}}
+    <tr>
+      <td>{{row.startDate}}</td>
+      <td>{{row.endDate}}</td>
+    </tr>
+  {{/each}}
+</tbody>
