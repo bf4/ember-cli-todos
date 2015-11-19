@@ -1,11 +1,7 @@
-<ul class="nav nav-tabs">
+{{#md-tabs selected=selected}}
   {{#each tabs as |tab|}}
-    {{#with (array-join routePrefix '.' tab) as |routeName|}}
-      {{#if (can "access route" routeName=routeName)}}
-        {{#nav-tab routeName=routeName is-active=(eq currentRouteName routeName)}}
-          {{capitalize-string tab}}
-        {{/nav-tab}}
-      {{/if}}
-    {{/with}}
+    {{#if (can "access route" routeName=tab.routeName)}}
+      {{nav-tab tab=tab}}
+    {{/if}}
   {{/each}}
-</ul>
+{{/md-tabs}}

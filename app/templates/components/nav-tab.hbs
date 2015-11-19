@@ -1,5 +1,3 @@
-<li role="presentation" class="tab {{if is-active "active"}}">
-  {{#link-to routeName}}
-    {{yield}}
-  {{/link-to}}
-</li>
+{{#link-to tab.routeName (query-params testParam=tab.id) }}
+  {{md-tab value=tab.id title=tab.title}}
+{{/link-to}}

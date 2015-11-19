@@ -1,0 +1,19 @@
+<thead>
+  <tr>
+    {{#each columnHeaders as |columnHeader|}}
+      {{#sortable-table-header key=columnHeader sortBy=sortBy sortAscending=sortAscending}}
+        <i class="mdi-content-sort"></i>
+        {{columnHeader}}
+      {{/sortable-table-header}}
+    {{/each}}
+  </tr>
+</thead>
+<tbody>
+  {{#each content as |row|}}
+    <tr>
+      {{#each columnHeaders as |columnHeader|}}
+        {{sortable-table-row key=columnHeader row=row}}
+      {{/each}}
+    </tr>
+  {{/each}}
+</tbody>
